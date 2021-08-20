@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  starkalpine.liftstatus:
+    build:
+      context: .
+      dockerfile: StarkAlpine.LiftStatus/Dockerfile
+    ports:
+      - "8080:80"
+
+  starkalpine.frontend:
+    build:
+      context: .
+      dockerfile: StarkAlpine.FrontEnd/Dockerfile
+    ports:
+      - "8081:80"

@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "StarkAlpine.LiftStatus",
+    "version": "v1"
+  },
+  "paths": {
+    "/LiftStatus": {
+      "get": {
+        "tags": [
+          "LiftStatus"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lift"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lift"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Lift"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LiftStatus": {
+        "enum": [
+          "Closed",
+          "Opening",
+          "Open",
+          "Suspended"
+        ],
+        "type": "string"
+      },
+      "Lift": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "liftStatus": {
+            "$ref": "#/components/schemas/LiftStatus"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

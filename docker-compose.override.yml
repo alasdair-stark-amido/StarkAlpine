@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  starkalpine.liftstatus:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+
+  starkalpine.frontend:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

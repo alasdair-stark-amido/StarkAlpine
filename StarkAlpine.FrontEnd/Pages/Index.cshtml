@@ -1,0 +1,13 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    @foreach (var lift in Model.Lifts)
+    {
+        <p>@lift.Name: @lift.LiftStatus</p>
+    }
+</div>
+
