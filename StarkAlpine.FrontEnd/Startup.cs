@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using StarkAlpine.FrontEnd.Configuration;
 
 namespace StarkAlpine.FrontEnd
 {
@@ -24,7 +25,11 @@ namespace StarkAlpine.FrontEnd
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddHttpClient<LiftStatusClient>(client => client.BaseAddress = new Uri("http://starkalpine.liftstatus/"));
+
+            var liftStatusClientOptions = new LiftStatusClientOptions();
+            Configuration.GetSection(nameof(LiftStatusClientOptions)).Bind(liftStatusClientOptions);
+
+            services.AddHttpClient<LiftStatusClient>(client => client.BaseAddress = new Uri(liftStatusClientOptions.BaseAddress));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

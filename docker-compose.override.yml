@@ -8,3 +8,4 @@ services:
   starkalpine.frontend:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - LiftStatusClientOptions__BaseAddress=http://starkalpine.liftstatus/
