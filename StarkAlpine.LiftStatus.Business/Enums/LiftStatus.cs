@@ -1,4 +1,4 @@
-﻿namespace StarkAlpine.LiftStatus.Api.Enums
+﻿namespace StarkAlpine.LiftStatus.Business.Enums
 {
     public enum LiftStatus
     {

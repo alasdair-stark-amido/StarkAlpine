@@ -8,6 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["StarkAlpine.LiftStatus.Api/StarkAlpine.LiftStatus.Api.csproj", "StarkAlpine.LiftStatus.Api/"]
+COPY ["StarkAlpine.LiftStatus.Business/StarkAlpine.LiftStatus.Business.csproj", "StarkAlpine.LiftStatus.Business/"]
 RUN dotnet restore "StarkAlpine.LiftStatus.Api/StarkAlpine.LiftStatus.Api.csproj"
 COPY . .
 WORKDIR "/src/StarkAlpine.LiftStatus.Api"

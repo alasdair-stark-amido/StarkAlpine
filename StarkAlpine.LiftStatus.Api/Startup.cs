@@ -5,6 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using StarkAlpine.LiftStatus.Api.Profiles;
+using StarkAlpine.LiftStatus.Business;
 
 namespace StarkAlpine.LiftStatus.Api
 {
@@ -29,6 +32,10 @@ namespace StarkAlpine.LiftStatus.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "StarkAlpine.LiftStatus", Version = "v1"});
             });
+
+            services.AddAutoMapper(typeof(LiftProfile));
+
+            services.AddSingleton<ILiftStatusService, LiftStatusService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

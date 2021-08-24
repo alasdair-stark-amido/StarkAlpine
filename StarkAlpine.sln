@@ -9,6 +9,8 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarkAlpine.FrontEnd", "StarkAlpine.FrontEnd\StarkAlpine.FrontEnd.csproj", "{3605BFDA-42A4-4032-A63E-D64DBCD305DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarkAlpine.LiftStatus.Business", "StarkAlpine.LiftStatus.Business\StarkAlpine.LiftStatus.Business.csproj", "{228F6C0D-991A-4170-8E84-FE8E8D81C92C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3605BFDA-42A4-4032-A63E-D64DBCD305DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3605BFDA-42A4-4032-A63E-D64DBCD305DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3605BFDA-42A4-4032-A63E-D64DBCD305DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228F6C0D-991A-4170-8E84-FE8E8D81C92C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228F6C0D-991A-4170-8E84-FE8E8D81C92C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228F6C0D-991A-4170-8E84-FE8E8D81C92C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228F6C0D-991A-4170-8E84-FE8E8D81C92C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
