@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <OpenApiReference Include="..\StarkAlpine.LiftStatus\swagger.json">
+    <OpenApiReference Include="..\StarkAlpine.LiftStatus.Api\swagger.json">
 	  <CodeGenerator>NSwagCSharp</CodeGenerator>
 	  <Link>OpenAPIs\swagger.json</Link>
 	  <ClassName>LiftStatusClient</ClassName>

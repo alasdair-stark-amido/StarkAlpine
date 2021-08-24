@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarkAlpine.LiftStatus", "StarkAlpine.LiftStatus\StarkAlpine.LiftStatus.csproj", "{8F6E9757-6E31-4989-8267-40872A7B3221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarkAlpine.LiftStatus.Api", "StarkAlpine.LiftStatus.Api\StarkAlpine.LiftStatus.Api.csproj", "{8F6E9757-6E31-4989-8267-40872A7B3221}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0BDFDDA0-2802-450B-8BBD-4B894437A577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarkAlpine.FrontEnd", "StarkAlpine.FrontEnd\StarkAlpine.FrontEnd.csproj", "{3605BFDA-42A4-4032-A63E-D64DBCD305DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarkAlpine.FrontEnd", "StarkAlpine.FrontEnd\StarkAlpine.FrontEnd.csproj", "{3605BFDA-42A4-4032-A63E-D64DBCD305DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,7 +4,7 @@ using StarkAlpine.LiftStatus.Records;
 using System;
 using System.Collections.Generic;
 
-namespace StarkAlpine.LiftStatus.Controllers
+namespace StarkAlpine.LiftStatus.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

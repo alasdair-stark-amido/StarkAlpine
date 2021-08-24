@@ -1,4 +1,4 @@
-﻿namespace StarkAlpine.LiftStatus.Records
+﻿namespace StarkAlpine.LiftStatus.Api.Records
 {
     public record Lift
     {

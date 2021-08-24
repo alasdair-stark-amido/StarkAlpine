@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace StarkAlpine.LiftStatus
+namespace StarkAlpine.LiftStatus.Api
 {
     public class Program
     {
