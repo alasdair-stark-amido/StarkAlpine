@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using StarkAlpine.LiftStatus.Records;
 using System;
 using System.Collections.Generic;
+using StarkAlpine.LiftStatus.Api.Records;
 
 namespace StarkAlpine.LiftStatus.Api.Controllers
 {

@@ -4,7 +4,7 @@ services:
   starkalpine.liftstatus:
     build:
       context: .
-      dockerfile: StarkAlpine.LiftStatus/Dockerfile
+      dockerfile: StarkAlpine.LiftStatus.Api/Dockerfile
     ports:
       - "8080:80"
 
