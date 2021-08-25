@@ -26,6 +26,6 @@ jobs:
     - name: Build the Docker image for the lift status API
       run: docker build . --file StarkAlpine.LiftStatus.Api/Dockerfile --tag starkalpineliftstatus:${{ env.TAG }}
     - name: Push the Docker image for the front end
-      run: docker push starkalpinefrontend:${{ env.TAG }}
+      run: docker push alasdairstarkamido/starkalpinefrontend:${{ env.TAG }}
     - name: Push the Docker image for the lift status API
-      run: docker push starkalpineliftstatus:${{ env.TAG }}
+      run: docker push alasdairstarkamido/starkalpineliftstatus:${{ env.TAG }}
