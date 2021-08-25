@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: liftstatus
-          image: docker.io/alasdairstarkamido/starkalpineliftstatus
+          image: docker.io/alasdairstarkamido/starkalpineliftstatus:1.0.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -27,6 +27,12 @@ spec:
               value: http://+:80
             - name: ASPNETCORE_ENVIRONMENT
               value: Development
+            - name: ResortOptions__TimeZone
+              value: Europe/Zurich
+            - name: ResortOptions__OpeningTime
+              value: '0900'
+            - name: ResortOptions__ClosingTime
+              value: '1600'
 ---
 apiVersion: v1
 kind: Service

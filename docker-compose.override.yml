@@ -4,6 +4,9 @@ services:
   starkalpine.liftstatus:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - ResortOptions__TimeZone=Europe/Zurich
+      - ResortOptions__OpeningTime=0900
+      - ResortOptions__ClosingTime=1600
 
   starkalpine.frontend:
     environment:

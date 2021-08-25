@@ -6,8 +6,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using NodaTime;
+using NodaTime.Extensions;
 using StarkAlpine.LiftStatus.Api.Profiles;
 using StarkAlpine.LiftStatus.Business;
+using StarkAlpine.LiftStatus.Business.Configuration;
 
 namespace StarkAlpine.LiftStatus.Api
 {
@@ -35,6 +38,11 @@ namespace StarkAlpine.LiftStatus.Api
 
             services.AddAutoMapper(typeof(LiftProfile));
 
+            var resortOptions = new ResortOptions();
+            Configuration.GetSection(nameof(ResortOptions)).Bind(resortOptions);
+
+            services.AddSingleton<IClock>(SystemClock.Instance);
+            services.AddSingleton(resortOptions);
             services.AddSingleton<ILiftStatusService, LiftStatusService>();
         }
 

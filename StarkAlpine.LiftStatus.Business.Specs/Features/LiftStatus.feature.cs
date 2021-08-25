@@ -80,14 +80,14 @@ namespace StarkAlpine.LiftStatus.Business.Specs.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Get lifts")]
+        [Xunit.SkippableFactAttribute(DisplayName="Lifts are closed out of hours")]
         [Xunit.TraitAttribute("FeatureTitle", "LiftStatus")]
-        [Xunit.TraitAttribute("Description", "Get lifts")]
-        public virtual void GetLifts()
+        [Xunit.TraitAttribute("Description", "Lifts are closed out of hours")]
+        public virtual void LiftsAreClosedOutOfHours()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get lifts", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Lifts are closed out of hours", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -108,11 +108,85 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Value"});
+                table1.AddRow(new string[] {
+                            "TimeZone",
+                            "America/Vancouver"});
+                table1.AddRow(new string[] {
+                            "OpeningTime",
+                            "0800"});
+                table1.AddRow(new string[] {
+                            "ClosingTime",
+                            "1600"});
 #line 5
+ testRunner.Given("the following resort:", ((string)(null)), table1, "Given ");
+#line hidden
+#line 10
+ testRunner.And("the current UTC time is 1500", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 11
  testRunner.When("I ask for a collection of lifts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 6
- testRunner.Then("a collection of lifts are returned with their current status", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.Then("lifts should all be closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Lifts are running when the resort is open")]
+        [Xunit.TraitAttribute("FeatureTitle", "LiftStatus")]
+        [Xunit.TraitAttribute("Description", "Lifts are running when the resort is open")]
+        public virtual void LiftsAreRunningWhenTheResortIsOpen()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Lifts are running when the resort is open", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 14
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Value"});
+                table2.AddRow(new string[] {
+                            "TimeZone",
+                            "America/Vancouver"});
+                table2.AddRow(new string[] {
+                            "OpeningTime",
+                            "0800"});
+                table2.AddRow(new string[] {
+                            "ClosingTime",
+                            "1600"});
+#line 15
+ testRunner.Given("the following resort:", ((string)(null)), table2, "Given ");
+#line hidden
+#line 20
+ testRunner.And("the current UTC time is 2000", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 21
+ testRunner.When("I ask for a collection of lifts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 22
+ testRunner.Then("lifts should not be closed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

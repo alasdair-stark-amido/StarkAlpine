@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: docker.io/alasdairstarkamido/starkalpinefrontend
+          image: docker.io/alasdairstarkamido/starkalpinefrontend:1.0.1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
