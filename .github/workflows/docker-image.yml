@@ -22,9 +22,9 @@ jobs:
         username: alasdairstarkamido
         password: ${{ secrets.DOCKERHUB_ACCESS_TOKEN }}
     - name: Build the Docker image for the front end
-      run: docker build . --file StarkAlpine.FrontEnd/Dockerfile --tag starkalpinefrontend:${{ env.TAG }}
+      run: docker build . --file StarkAlpine.FrontEnd/Dockerfile --tag alasdairstark/starkalpinefrontend:${{ env.TAG }}
     - name: Build the Docker image for the lift status API
-      run: docker build . --file StarkAlpine.LiftStatus.Api/Dockerfile --tag starkalpineliftstatus:${{ env.TAG }}
+      run: docker build . --file StarkAlpine.LiftStatus.Api/Dockerfile --tag alasdairstark/starkalpineliftstatus:${{ env.TAG }}
     - name: Push the Docker image for the front end
       run: docker push alasdairstarkamido/starkalpinefrontend:${{ env.TAG }}
     - name: Push the Docker image for the lift status API
