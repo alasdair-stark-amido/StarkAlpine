@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: liftstatus
-          image: docker.io/alasdairstarkamido/starkalpineliftstatus:1.0.1
+          image: docker.io/alasdairstarkamido/starkalpineliftstatus:1629904440
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
